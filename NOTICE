@@ -1,0 +1,17 @@
+拟物书架 · Skeuomorphic Bookshelf
+Copyright (C) 2026 nshaoyy
+Licensed under the GNU Affero General Public License v3.0 (see LICENSE).
+
+This project includes third-party code:
+
+src/image/bounded-baseline-jpeg.js
+  A bounded-memory baseline JPEG decoder derived from jpeg-js, which is derived
+  from the pdf.js JPEG decoder.
+  - pdf.js: Copyright Mozilla Foundation and contributors, Apache License 2.0
+    (header retained in the file).
+  - jpeg-js: Copyright (c) 2014, Eugene Ware, BSD 3-Clause License
+    (full text in src/image/bounded-baseline-jpeg.LICENSE).
+
+Runtime dependencies (installed from npm, not vendored):
+  - jpeg-js 0.4.4 — BSD 3-Clause
+  - fast-png 8.0.0 — MIT

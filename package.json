@@ -1,0 +1,23 @@
+{
+  "name": "skeuomorphic-bookshelf",
+  "version": "0.1.0",
+  "description": "拟物书架 · Turn photos of your bookshelf into a browsable online shelf, using your own vision / image-generation API.",
+  "license": "AGPL-3.0-only",
+  "type": "module",
+  "private": true,
+  "engines": { "node": ">=22.18.0" },
+  "scripts": {
+    "start": "node src/server.ts",
+    "dev": "node --watch src/server.ts",
+    "test": "node --test \"test/*.test.ts\"",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "fast-png": "8.0.0",
+    "jpeg-js": "0.4.4"
+  },
+  "devDependencies": {
+    "@types/node": "22.19.19",
+    "typescript": "5.9.3"
+  }
+}

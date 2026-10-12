@@ -1,0 +1,26 @@
+:root { --bg: #f6f3ee; --fg: #23211d; --muted: #6f6a61; --line: #ddd6ca; --accent: #2f5d50; --danger: #a33a2c; --shelf: #8a6a4a; color-scheme: light dark; }
+@media (prefers-color-scheme: dark) { :root { --bg: #1b1a18; --fg: #ece8e1; --muted: #a49e93; --line: #3a3732; --accent: #7fb8a4; --danger: #e0806f; --shelf: #6b5038; } }
+* { box-sizing: border-box; }
+body { margin: 0; font: 15px/1.5 system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background: var(--bg); color: var(--fg); }
+.top { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px clamp(16px, 4vw, 40px); border-bottom: 1px solid var(--line); }
+h1 { font-size: 20px; margin: 0; } h2 { font-size: 17px; margin: 0 0 12px; }
+.actions { display: flex; align-items: center; gap: 12px; }
+.muted { color: var(--muted); } .center { text-align: center; margin: 48px 16px; } .error { color: var(--danger); min-height: 1.2em; margin: 4px 0; }
+button { font: inherit; padding: 7px 14px; border-radius: 8px; border: 1px solid var(--line); background: transparent; color: var(--fg); cursor: pointer; }
+button.primary { background: var(--accent); border-color: var(--accent); color: #fff; } button.danger { color: var(--danger); }
+button:disabled { opacity: .5; cursor: default; }
+#shelf { padding: 24px clamp(16px, 4vw, 40px) 48px; display: flex; flex-direction: column; gap: 28px; }
+.shelf-row { display: flex; align-items: flex-end; gap: 3px; padding: 0 6px; border-bottom: 10px solid var(--shelf); min-height: 60px; flex-wrap: nowrap; overflow-x: auto; }
+.spine { padding: 0; border: 0; border-radius: 2px; background: none; flex: none; box-shadow: 0 1px 2px rgb(0 0 0 / .25); }
+.spine img { display: block; height: 100%; width: 100%; border-radius: 2px; }
+.spine:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+#jobs { padding: 0 clamp(16px, 4vw, 40px); }
+.job { margin-top: 12px; padding: 10px 14px; border: 1px solid var(--line); border-radius: 10px; }
+.job ul { margin: 6px 0 0; padding-left: 18px; color: var(--muted); }
+dialog { border: 1px solid var(--line); border-radius: 14px; background: var(--bg); color: var(--fg); width: min(440px, calc(100vw - 32px)); padding: 20px; }
+dialog::backdrop { background: rgb(0 0 0 / .4); }
+label { display: block; margin: 10px 0; } label > span { display: block; font-size: 13px; color: var(--muted); }
+input, select, textarea { width: 100%; font: inherit; padding: 6px 8px; border: 1px solid var(--line); border-radius: 6px; background: transparent; color: var(--fg); }
+.row { display: flex; gap: 10px; } .row > label { flex: 1; } .end { justify-content: flex-end; margin-top: 16px; } .between { justify-content: space-between; margin-top: 12px; }
+.row span { display: flex; gap: 8px; }
+#editSpine { display: block; max-height: 180px; margin: 0 auto 8px; border-radius: 3px; }
