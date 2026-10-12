@@ -4,6 +4,12 @@
 
 *Turn a photo of your bookshelf into a browsable online shelf, using your own vision and image-generation API. English below.*
 
+## 为什么做这个
+
+说实话，这是给实体书爱好者装逼用的。我有哪些书，罗杰·泽拉兹尼还有哪本没买，《地海巫师》有哪两个版本，我自己门清，不需要工具帮我记。可我挑书、攒书的品味，全在家里的书架上，没法随身带着给人看。拍张照片发出去吧，书脊歪的歪、反光的反光，看不清，质感也丢了，硬装。
+
+拟物书架就是解决这个的，让实体书爱好者可以优雅地装逼：对着书架拍一张，得到一个链接，打开就是一面像模像样的书架。认书、扶正、录入交给模型，人只管挑书，和体面地炫耀挑过的书。
+
 ## 它做什么
 
 1. 你拍一张书脊朝外的书架照片上传。
@@ -77,6 +83,14 @@ npm run typecheck
 ---
 
 ## English
+
+### Why
+
+Honestly, it's for book lovers who like to show off. I know exactly what I own — which Roger Zelazny I'm still missing, which two editions of *A Wizard of Earthsea* are on my shelf. I don't need an app to remember. But my taste in choosing and collecting books lives on the shelves at home, and I can't carry it around. A photo doesn't cut it: the spines are tilted, there's glare, you can't read them, the texture is gone. It just looks like trying too hard.
+
+Skeuomorphic Bookshelf lets book lovers show off, gracefully: take one photo of a shelf, get a link that opens onto a shelf that actually looks like one. Models do the recognizing, straightening and cataloguing; you just choose the books — and show them off with a little dignity.
+
+### What it does
 
 Skeuomorphic Bookshelf turns a photo of your bookshelf into an online shelf. A vision model finds each spine (in reading order), the spine is perspective-corrected and read for title and author, and optionally an image model redraws it as a clean flat spine that the vision model double-checks. You bring your own OpenAI-compatible vision API and, optionally, an image API.
 
