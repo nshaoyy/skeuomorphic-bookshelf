@@ -76,6 +76,10 @@ npm run typecheck
 
 代码结构：`src/server.ts`（HTTP 与鉴权）、`src/pipeline.ts`（照片 → 书）、`src/providers.ts`（模型接口）、`src/prompts.ts`（提示词）、`src/db.ts`（SQLite）、`src/image/`（解码、透视校正、元数据去除）、`public/`（网页，无需构建）。
 
+## 参与贡献
+
+目前暂不接受代码合并请求，欢迎提 issue：bug、建议，以及你调好的提示词和模型组合。详见 [CONTRIBUTING.md](CONTRIBUTING.md)。
+
 ## 许可证
 
 [GNU AGPL-3.0](LICENSE)。如果你修改后以网络服务的形式提供给他人使用，需要向这些用户提供你修改后的源代码。第三方代码的许可证见 [NOTICE](NOTICE)。
@@ -97,5 +101,7 @@ Skeuomorphic Bookshelf turns a photo of your bookshelf into an online shelf. A v
 **Results depend heavily on your models and prompts.** The bundled prompts are a working baseline, not tuned for any model. Override them by placing `detect.txt`, `identify.txt`, `spine.txt` or `check.txt` in `DATA_DIR/prompts/`.
 
 Quick start: Node.js ≥ 22.18, `npm install`, copy `.env.example` to `.env`, `npm start`. Offline demo with a fake model: `node test/demo-server.ts`. Tests (`npm test`) never call a real provider.
+
+Contributing: pull requests aren't being accepted for now; issues, bug reports and prompt/model recipes are very welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 Privacy: location/capture metadata is stripped in the browser and again on the server; original photos are never served; without `SHELF_PASSWORD` the server only listens on localhost. Licensed under AGPL-3.0.
